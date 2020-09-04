@@ -28,6 +28,13 @@ app.use(morgan('dev'));
 app.use(userRoutes);
 app.use(courseRoutes);
 
+// Import cors library
+const cors = require('cors');
+
+// Enable all CORS Requests
+app.use(cors());
+
+
 // setup a friendly greeting for the root route
 app.get('/', (req, res) => {
   res.json({
