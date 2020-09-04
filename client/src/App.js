@@ -13,7 +13,7 @@ import Courses from './components/Courses';
 // import CreateCourse from './components/CreateCourse'
 // import UpdateCourse from './components/UpdateCourse'
 import UserSignUp from './components/UserSignUp'
-// import UserSignIn from './components/UserSignIn'
+import UserSignIn from './components/UserSignIn'
 // import UserSignOut from './components/UserSignOut'
 
 export default () => {
@@ -25,8 +25,8 @@ export default () => {
           <Switch>
             <Route exact path="/" component={Courses} />
             <Route path="/signup" component={UserSignUp} />
-            {/* <Route path="/courses/signin" component={UserSignIn} />
-            <Route path="/courses/signout" component={UserSignOut} />
+            <Route path="/signin" component={UserSignIn} />
+            {/* <Route path="/courses/signout" component={UserSignOut} />
             <Route path="/courses/create" component={CreateCourse} />
             <Route path="/courses/:id/update" component={UpdateCourse} />
             <Route path="/courses/:id" component={CourseDetail} /> */}

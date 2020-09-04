@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 /*
     This component provides the "Sign Up" screen by rendering a form that allows a user to sign up by creating a new account. 
@@ -26,7 +27,7 @@ const UserSignUp = () => {
                             </form>
                         </div>
                     <p>&nbsp;</p>
-                <p>Already have a user account? <a href="sign-in.html">Click here</a> to sign in!</p>
+                <p>Already have a user account? <NavLink to="/signin">Click here</NavLink> to sign in!</p>
                 </div>
             </div>
         </div>
