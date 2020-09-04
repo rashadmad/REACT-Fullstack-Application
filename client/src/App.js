@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//components
+import Header from './components/Header';
+import Courses from './components/Courses';
+// import CourseDetail from './components/CourseDetail'
+// import CreateCourse from './components/CreateCourse'
+// import UpdateCourse from './components/UpdateCourse'
+// import UserSignUp from './components/UserSignUp'
+// import UserSignIn from './components/UserSignIn'
+// import UserSignOut from './components/UserSignOut'
+
+export default () => {
+    return (
+      <Router>
+        <div className="App">
+          <Header />
+          <hr></hr>
+          <Switch>
+            <Route exact path="/" component={Courses} />
+            {/* <Route path="/courses/signup" component={UserSignUp} />
+            <Route path="/courses/signin" component={UserSignIn} />
+            <Route path="/courses/signout" component={UserSignOut} />
+            <Route path="/courses/create" component={CreateCourse} />
+            <Route path="/courses/:id/update" component={UpdateCourse} />
+            <Route path="/courses/:id" component={CourseDetail} /> */}
+          </Switch>
+        </div>
+      </Router>
+    );
 }
-
-export default App;
