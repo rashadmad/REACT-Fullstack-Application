@@ -15,6 +15,7 @@ import Courses from './components/Courses';
 import UserSignUp from './components/UserSignUp'
 import UserSignIn from './components/UserSignIn'
 // import UserSignOut from './components/UserSignOut'
+import NotFound from './components/NotFound'
 
 export default () => {
     return (
@@ -30,6 +31,7 @@ export default () => {
             <Route path="/courses/create" component={CreateCourse} />
             <Route path="/courses/:id/update" component={UpdateCourse} />
             <Route path="/courses/:id" component={CourseDetail} /> */}
+            <Route component={NotFound} />
           </Switch>
         </div>
       </Router>
