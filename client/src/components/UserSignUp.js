@@ -6,6 +6,8 @@ import React from 'react';
     This component also renders a "Cancel" button that returns the user to the default route (i.e. the list of courses).
 */
 
+// route: /signup - UserSignUp
+
 const UserSignUp = () => {
 
     return (
