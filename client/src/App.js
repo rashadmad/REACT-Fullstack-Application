@@ -25,6 +25,7 @@ export default () => {
           <hr></hr>
           <Switch>
             <Route exact path="/" component={Courses} />
+            <Route exact path="/courses" component={Courses} />
             <Route path="/signup" component={UserSignUp} />
             <Route path="/signin" component={UserSignIn} />
             {/* <Route path="/courses/signout" component={UserSignOut} />

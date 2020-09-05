@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /*
     This component provides the "Courses" screen by retrieving the list of courses from the REST API's /api/courses route and rendering a list of courses. 
@@ -7,6 +7,23 @@ import React from 'react';
 */
 
 const Courses = () => {
+
+    useEffect(()  => {
+        fetch('http://localhost:5000/api/courses', {
+            method: 'GET',
+            credentials: 'same-origin',
+            redirect: 'follow',
+            agent: null,
+            headers: {
+                "Content-Type": "text/plain",
+                'Authorization': 'Basic ' + btoa('gino@coolcats.com:password'),
+            },
+            timeout: 5000 
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.log('Error fetching and parsing data', error))
+    })
 
     //const [coursesData] = useState([]);
 
